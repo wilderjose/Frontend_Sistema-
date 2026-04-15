@@ -107,14 +107,21 @@ function MatriculaForm({ onSave, initialData }) {
                 <div className="p-4 rounded-lg bg-emerald-100 space-y-2">
                     <label className="block text-gray-700 text-2xl font-bold">Datos Personales</label>
                     <div className="flex gap-2">
-                        <input type="date" name="f_matricula" value={form.f_matricula || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                        <label htmlFor="Fecha de Inscripcion">Fecha de Nacimiento:</label>
+                        <input type="date" name="fecha_nacimiento" value={form.fecha_nacimiento || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                        <label htmlFor="Nombre">Nombre:</label>
                         <input name="nombre" placeholder="Nombre" value={form.nombre || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
                     </div>
+                    <label htmlFor="Apellido">Apellido:</label>
                     <input name="apellido" placeholder="Apellido" value={form.apellido || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                    <label htmlFor="Edad">Edad:</label>
                     <input name="edad" type="number" placeholder="Edad" value={form.edad || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                    <label htmlFor="Correo Electrónico">Correo Electrónico:</label>
                     <input name="correo_electronico" placeholder="Correo Electrónico" value={form.correo_electronico || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                    <label htmlFor="Dirección">Dirección:</label>
                     <input name="direccion" placeholder="Dirección" value={form.direccion || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
 
+                    <label htmlFor="Nivel Educativo">Nivel educativo:</label>
                      <select name="nivel_educativo" value={form.nivel_educativo || ""} onChange={handleChange} className="w-full p-2 border rounded" required>
                         <option value="">Nivel educativo</option>
                         <option value="Primaria">Primaria</option>
@@ -123,56 +130,72 @@ function MatriculaForm({ onSave, initialData }) {
                         <option value="Profecional">Profecional</option>
                     </select>
 
+                    <label htmlFor="Profesión u Oficio">Profesión u Oficio:</label>
                     <input name="profesion_u_oficio" placeholder="Profesión u Oficio" value={form.profesion_u_oficio || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                    <label htmlFor="Teléfono Móvil">Teléfono Móvil:</label>
                     <input name="telefono_movil" placeholder="Teléfono Móvil" value={form.telefono_movil || ""} onChange={handleChange} className="w-full p-2 border rounded" required />
+                    <label htmlFor="Género">Género:</label>
                     <select name="sexo" value={form.sexo || ""} onChange={handleChange} className="w-full p-2 border rounded" required>
                         <option value="">Género</option>
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>
                     </select>
+                    
+                    <label htmlFor="Nacionalidad">Nacionalidad:</label>
                     <input name="nacionalidad" placeholder="Nacionalidad" value={form.nacionalidad || ""} onChange={handleChange} className="w-full p-2 border rounded" />
+                    <label htmlFor="Cédula">Cédula:</label>
                     <input name="cedula" placeholder="Cédula" value={form.cedula || ""} onChange={handleChange} className="w-full p-2 border rounded" />
                 </div>
             </div>
 
             <div className="space-y-3">
-                <label className="block text-gray-700 text-2xl font-semibold">Detalles Académicos</label>
-                <input type="date" name="fecha_nacimiento" value={form.fecha_nacimiento || ""} onChange={handleChange} className="w-full p-2 border rounded" />
+                <label className="block text-gray-700 text-4xl font-semibold">Detalles Académicos</label>
+                <label htmlFor="Fecha de Nacimiento">Fecha de Inscripción:</label>
+                <input type="date" name="f_matricula" value={form.f_matricula || ""} onChange={handleChange} className="w-full p-2 border rounded" />
                 
+                
+                <label htmlFor="Modalidad">Modalidad:</label>
                 <select name="modalidad" value={form.modalidad || ""} onChange={handleChange} className="w-full p-2 border rounded" required>
                     <option value="">Modalidad</option>
                     <option value="Regular">Regular</option>
                     <option value="Extraordinario">Extraordinario</option>
                 </select>
                 
+                <label htmlFor="Horario">Horario:</label>
                 <select name="horario" value={form.horario || ""} onChange={handleChange} className="w-full p-2 border rounded" required>
                     <option value="">Horario</option>
-                    <option value="8AM A 10AM">8AM A 10AM</option>
+                    <option value="06AM A 08AM">06AM A 08AM</option>
+                    <option value="08AM A 10AM">08AM A 10AM</option>
                     <option value="10AM A 12PM">10AM A 12PM</option>
                     <option value="12PM A 02PM">12PM A 02PM</option>
                     <option value="04PM A 06PM">04PM A 06PM</option>
                 </select>
-
+        
+                <label htmlFor="Contacto de Emergencia">Contacto de Emergencia:</label>
                 <input name="en_caso_de_emrgencia" placeholder="Contacto Emergencia" value={form.en_caso_de_emrgencia || ""} onChange={handleChange} className="w-full p-2 border rounded" />
+                <label htmlFor="Teléfono de Emergencia">Teléfono de Emergencia:</label>
                 <input name="telefono_emergencia" placeholder="Teléfono Emergencia" value={form.telefono_emergencia || ""} onChange={handleChange} className="w-full p-2 border rounded" />
                 
+                
+                <label htmlFor="Aparición">¿Dónde se enteró?</label>
                 <select name="apariconia" value={form.apariconia || ""} onChange={handleChange} className="w-full p-2 border rounded">
                     <option value="">¿Dónde se enteró?</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="TikTok">TikTok</option>
+                    <option value="Facebook">Sitio web oficial</option>
+                    <option value="TikTok">Redes sociales</option>
                     <option value="Referido">Referido</option>
-                    <option value="Boletas">Boleta</option>
-                    <option value="Amigo">Amigo</option>
+                    <option value="Boletas">Volante/Promoción impresa</option>
                     <option value="otro">Otro</option>
                 </select>
                 
+                <label htmlFor="Categoria">Categoría:</label>
                 <select name="categoria" value={form.categoria || ""} onChange={handleChange} className="w-full p-2 border rounded">
                     <option value="">Categoría</option>
-                    <option value="A1">A1</option>
-                    <option value="A2">A2</option>
-                    <option value="A3">A3</option>
+                    <option value="A1">1</option>
+                    <option value="A2">2</option>
+                    <option value="A3">3</option>
                 </select>
                 
+                <label htmlFor="Tipo de Pago">Tipo de Pago:</label>
                 <select name="tipo_pago" value={form.tipo_pago || ""} onChange={handleChange} className="w-full p-2 border rounded">
                     <option value="">Tipo de Pago</option>
                     <option value="pago_completo">Completo</option>
@@ -180,6 +203,7 @@ function MatriculaForm({ onSave, initialData }) {
                     <option value="Beneficio">Beneficio</option>
                 </select>
                 
+                <label htmlFor="Tipo de Curso">Tipo de Curso:</label>
                 <select name="tipo_curso" value={form.tipo_curso || ""} onChange={handleChange} className="w-full p-2 border rounded">
                     <option value="">Tipo de Curso</option>
                     <option value="curso_completo">Curso Completo</option>

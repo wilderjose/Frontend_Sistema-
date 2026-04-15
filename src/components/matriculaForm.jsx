@@ -81,7 +81,7 @@ function MatriculaForm({ onSave, initialData }) {
                     icon: 'success',
                     confirmButtonText: 'Aceptar'
                 }).then(() => {
-                    navigate("/dashboard/matricula");
+                    navigate("/dashboard");
                 });
 
             } else {

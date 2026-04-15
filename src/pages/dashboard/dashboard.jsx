@@ -70,9 +70,31 @@ function Dashboard() {
                 isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
                 
-                <div className="p-6 text-xl font-bold text-indigo-400 border-b border-gray-200">
-                    Escuela de Manejo
+        <div className="p-4 border-b border-gray-200">
+            <div className="flex items-center gap-3 flex-nowrap">
+                
+                {/* LOGO */}
+                <img 
+                    src="/Logo.png" 
+                    alt="Logo" 
+                    className="w-12 h-12 object-contain flex-shrink-0"
+                />
+
+                {/* TEXTO */}
+                <div className="flex flex-col justify-center">
+                    <span className="text-indigo-500 font-bold text-sm whitespace-nowrap">
+                        Escuela de Manejo
+                    </span>
+                    <span className="text-indigo-400 font-bold text-sm whitespace-nowrap">
+                        Cacique ADIACT
+                    </span>
                 </div>
+            </div>
+
+
+
+
+            </div>
 
                 <nav className="mt-4 px-4 space-y-2 overflow-y-auto h-[calc(100vh-80px)]">
                     <button

@@ -6,6 +6,7 @@ function ProtectedRoute({ children, rolesPermitidos = [] }) {
     const { user, token } = useAuth();
 
     // Si no hay token, redirigir al login
+    // Si est aes una ruta protegida mia
     if (!token) {
         return <Navigate to="/login" />;
     }

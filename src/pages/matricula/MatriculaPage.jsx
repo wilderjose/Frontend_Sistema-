@@ -430,11 +430,13 @@ function MatriculaPage() {
                                 <th className="p-3">Categoría</th>
                                 <th className="p-3">Curso</th>
                                 <th className="p-3">Opciones</th>
+                                  {/*Tabla que muestra los datos */}
                             </tr>
                         </thead>
 
 
 
+                        {/*Tabla que muestra los datos */}
                         {/*Tabla que muestra los datos */}
                         <tbody>
                             {loading ? (
